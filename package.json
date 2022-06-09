@@ -1,0 +1,50 @@
+{
+  "name": "@kult-byra/sanity-next-image",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/kult-byra"
+  },
+  "version": "0.0.1",
+  "description": "Simple drop in replacement for <img /> that loads images from the Sanity.io CDN",
+  "scripts": {
+    "rollup": "rollup -c",
+    "dev": "rollup -w -c",
+    "build": "pnpm rollup"
+  },
+  "keywords": [
+    "sanity",
+    "next",
+    "image"
+  ],
+  "author": "Sigurd Heggemsnes",
+  "license": "MIT",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.ts",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "@types/react": "^18.0.12",
+    "config": "workspace:*",
+    "next": "^12.1.6",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "rollup": "^2.75.6",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "tsconfig": "workspace:*",
+    "typescript": "^4.7.3"
+  },
+  "peerDependencies": {
+    "next": "^12",
+    "react": "^16 || ^17 || ^18",
+    "react-dom": "^16 || ^17 || ^18"
+  },
+  "dependencies": {
+    "@sanity/image-url": "^0.140.22"
+  }
+}
